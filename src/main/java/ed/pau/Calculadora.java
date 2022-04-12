@@ -52,5 +52,64 @@ public class Calculadora {
 	public int diveix(int a, int b) {
 		return a/b;
 	}
-	
+
+	/**
+	 * Calculo para saber la multiplicación de 2 numeros.
+	 * @param multiplicando
+	 * @param numMax
+	 * @return resultado de la multiplicación
+	 */
+	public int calculo1(int multiplicando , int numMax ){
+
+		int num = 1;
+
+		for ( int i = 0; i < numMax ; i++ ){
+			num = num * multiplicando;
+		}
+
+		return num;
+
+	}
+
+	/**
+	 * Saber si el resultado es igual a 0
+	 * @param dividendo
+	 * @return true o false
+	 */
+	public boolean calculo2(int dividendo ){
+
+		boolean resultado;
+
+		if ( dividendo % 2 == 0) {
+			resultado = true;
+		} else {
+			resultado = false;
+		}
+
+		return resultado;
+
+	}
+
+	/**
+	 * Hace calculos hasta que el numero sea mayor que 0
+	 * @param num
+	 * @return el resultado del calculo
+	 */
+	public String calculo3(int num){
+
+		String resultString = "";
+		int numeroRes = num;
+		int sumando;
+
+		while ( numeroRes > 0) {
+
+			sumando = numeroRes % 2;
+
+			resultString = sumando + resultString;
+
+			numeroRes = numeroRes / 2;
+
+		}
+		return resultString;
+	}
 }
